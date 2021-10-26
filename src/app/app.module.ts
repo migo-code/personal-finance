@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccountsDashboardComponent } from './components/accounts-dashboard/accounts-dashboard.component';
 import {MatTableModule} from "@angular/material/table";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TransactionsComponent } from './components/transactions/transactions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddNewAccountComponent,
-    AccountsDashboardComponent
+    AccountsDashboardComponent,
+    TransactionsComponent
   ],
   imports: [
     BrowserModule,

@@ -4,9 +4,9 @@ export enum Type {
 }
 
 export interface Account {
-  id?: string,
-  type: Type,
-  name: string,
-  description?: string,
+  id?: string;
+  type: Type;
+  name: string;
+  description?: string;
   autoPay?: boolean
 }
