@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { AddNewAccountComponent } from './add-new-account.component';
+import { AddNewAccountComponent } from "./add-new-account.component";
 
-describe('AddNewAccountComponent', () => {
+describe("AddNewAccountComponent", () => {
   let component: AddNewAccountComponent;
   let fixture: ComponentFixture<AddNewAccountComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddNewAccountComponent ]
-    })
-    .compileComponents();
+      declarations: [AddNewAccountComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('AddNewAccountComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
