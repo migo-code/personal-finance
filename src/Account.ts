@@ -1,6 +1,6 @@
 export enum Type {
   Expense,
-  Income
+  Income,
 }
 
 export interface Account {
@@ -8,5 +8,5 @@ export interface Account {
   type: Type;
   name: string;
   description?: string;
-  autoPay?: boolean
+  autoPay?: boolean;
 }
