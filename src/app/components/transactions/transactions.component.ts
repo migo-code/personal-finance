@@ -9,7 +9,7 @@ import {collection, collectionData, Firestore} from "@angular/fire/firestore";
     styleUrls: ['./transactions.component.scss']
 })
 export class TransactionsComponent implements OnInit {
-    displayedColumns: string[] = ['date', 'amount']
+    displayedColumns: string[] = ['account.name', 'date', 'amount']
     transactions: Transaction[] = [];
     transactionStuff$!: Observable<Transaction[]>
 

@@ -2,10 +2,10 @@
     <h2>Transaction History</h2>
 
     <table *ngIf="transactions" mat-table [dataSource]="transactions" class="mat-elevation-z8">
-        <!--    <ng-container matColumnDef="account.name">-->
-        <!--        <th mat-header-cell *matHeaderCellDef> Name </th>-->
-        <!--        <td mat-cell *matCellDef="let transaction"> {{transaction.account?.name}} </td>-->
-        <!--    </ng-container>-->
+        <ng-container matColumnDef="account.name">
+            <th mat-header-cell *matHeaderCellDef> Name</th>
+            <td mat-cell *matCellDef="let transaction"> {{transaction.account?.name}} </td>
+        </ng-container>
         <ng-container matColumnDef="date">
             <th mat-header-cell *matHeaderCellDef> Date</th>
             <td mat-cell *matCellDef="let transaction"> {{transaction.date}} </td>
