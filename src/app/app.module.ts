@@ -15,6 +15,10 @@ import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {HttpClientModule} from "@angular/common/http";
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
     declarations: [
@@ -34,7 +38,10 @@ import {HttpClientModule} from "@angular/common/http";
         MatListModule,
         MatIconModule,
         MatButtonModule,
-        HttpClientModule
+        HttpClientModule,
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideAuth(() => getAuth()),
+        provideFirestore(() => getFirestore())
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -1,3 +1,7 @@
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,webstorm,angular,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,webstorm,angular,node

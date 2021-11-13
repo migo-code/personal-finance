@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Transaction} from "../../../Transaction";
-import {BillsService} from "../../services/bills.service";
 import {Observable} from "rxjs";
+import {collection, collectionData, Firestore} from "@angular/fire/firestore";
 
 @Component({
     selector: 'app-transactions',
@@ -9,13 +9,15 @@ import {Observable} from "rxjs";
     styleUrls: ['./transactions.component.scss']
 })
 export class TransactionsComponent implements OnInit {
-    displayedColumns: string[] = ['account.name', 'date', 'amount']
+    displayedColumns: string[] = ['date', 'amount']
     transactions: Transaction[] = [];
+    transactionStuff$!: Observable<Transaction[]>
 
-    constructor(private billsService: BillsService) {
+    constructor(private firestore: Firestore) {
     }
 
     ngOnInit(): void {
-        this.billsService.getTransactions().subscribe(transactions => this.transactions = transactions);
+        this.transactionStuff$ = collectionData(collection(this.firestore, 'transactions')) as Observable<Transaction[]>;
+        this.transactionStuff$.subscribe(transactions => this.transactions = transactions);
     }
 }
