@@ -1,30 +1,43 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { AddNewAccountComponent } from './components/add-new-account/add-new-account.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AccountsDashboardComponent } from './components/accounts-dashboard/accounts-dashboard.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {AddNewAccountComponent} from './components/accounts/add-new-account/add-new-account.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AccountsComponent} from './components/accounts/accounts.component';
 import {MatTableModule} from "@angular/material/table";
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { TransactionsComponent } from './components/transactions/transactions.component';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {TransactionsComponent} from './components/transactions/transactions.component';
+import {SideNavComponent} from './global/side-nav/side-nav.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatListModule} from "@angular/material/list";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AddNewAccountComponent,
-    AccountsDashboardComponent,
-    TransactionsComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatTableModule,
-    FontAwesomeModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        AddNewAccountComponent,
+        AccountsComponent,
+        TransactionsComponent,
+        SideNavComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatTableModule,
+        FontAwesomeModule,
+        MatSidenavModule,
+        MatListModule,
+        MatIconModule,
+        MatButtonModule,
+        HttpClientModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

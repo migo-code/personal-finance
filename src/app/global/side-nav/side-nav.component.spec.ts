@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AccountsDashboardComponent } from './accounts-dashboard.component';
+import { SideNavComponent } from './side-nav.component';
 
-describe('AccountsDashboardComponent', () => {
-  let component: AccountsDashboardComponent;
-  let fixture: ComponentFixture<AccountsDashboardComponent>;
+describe('SideNavComponent', () => {
+  let component: SideNavComponent;
+  let fixture: ComponentFixture<SideNavComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AccountsDashboardComponent ]
+      declarations: [ SideNavComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AccountsDashboardComponent);
+    fixture = TestBed.createComponent(SideNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

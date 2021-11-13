@@ -1,18 +1,21 @@
-import {Dinero} from "dinero.js";
+import {Account} from "./Account";
 
-export enum TransactionType {
+export enum Type {
     payment,
     deposit
 }
 
-export interface Transaction {
-    id?: string;
-    accountId?: string;
-    name: string;
+export interface User {
     userID?: string;
     userName?: string;
-    transactionType: TransactionType;
+}
+
+export interface Transaction {
+    id?: string;
+    account?: Account,
+    user?: User,
+    type: Type;
     date: string;
-    amount: Dinero<any>;
+    amount: number;
     note?: string;
 }
