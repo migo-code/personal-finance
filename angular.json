@@ -113,11 +113,23 @@
             "ssr": false,
             "browserTarget": "personal-finance:build:production",
             "firebaseProject": "personal-finance-455ab",
-            "firebaseHostingSite": "personal-finance-455ab"
+            "firebaseHostingSite": "personal-finance-455ab",
+            "lint": {
+              "builder": "@angular-eslint/builder:lint",
+              "options": {
+                "lintFilePatterns": [
+                  "src/**/*.ts",
+                  "src/**/*.html"
+                ]
+              }
+            }
           }
         }
       }
     }
   },
-  "defaultProject": "personal-finance"
+  "defaultProject": "personal-finance",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
