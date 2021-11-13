@@ -21,29 +21,23 @@ import { provideAuth, getAuth } from "@angular/fire/auth";
 import { provideFirestore, getFirestore } from "@angular/fire/firestore";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AddNewAccountComponent,
-    AccountsComponent,
-    TransactionsComponent,
-    SideNavComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatTableModule,
-    FontAwesomeModule,
-    MatSidenavModule,
-    MatListModule,
-    MatIconModule,
-    MatButtonModule,
-    HttpClientModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent, AddNewAccountComponent, AccountsComponent, TransactionsComponent, SideNavComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatTableModule,
+        FontAwesomeModule,
+        MatSidenavModule,
+        MatListModule,
+        MatIconModule,
+        MatButtonModule,
+        HttpClientModule,
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideAuth(() => getAuth()),
+        provideFirestore(() => getFirestore()),
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -4,22 +4,22 @@ import { TransactionsComponent } from "./components/transactions/transactions.co
 import { AccountsComponent } from "./components/accounts/accounts.component";
 
 const routes: Routes = [
-  {
-    path: "",
-    component: AccountsComponent,
-  },
-  {
-    path: "transaction-history",
-    component: TransactionsComponent,
-  },
-  {
-    path: "accounts",
-    component: AccountsComponent,
-  },
+    {
+        path: "",
+        component: AccountsComponent,
+    },
+    {
+        path: "transaction-history",
+        component: TransactionsComponent,
+    },
+    {
+        path: "accounts",
+        component: AccountsComponent,
+    },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
 })
 export class AppRoutingModule {}

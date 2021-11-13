@@ -1,12 +1,12 @@
 export enum Type {
-  Expense,
-  Income,
+    Expense,
+    Income,
 }
 
 export interface Account {
-  id?: string;
-  type: Type;
-  name: string;
-  description?: string;
-  autoPay?: boolean;
+    id?: string;
+    type: Type;
+    name: string;
+    description?: string;
+    autoPay?: boolean;
 }
