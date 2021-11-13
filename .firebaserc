@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "personal-finance-455ab": {
+      "hosting": {
+        "personal-finance": [
+          "personal-finance-455ab"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "personal-finance-455ab"
+  }
+}

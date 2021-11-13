@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Account, Type} from "../../../Account";
+import {Account} from "../../../Account";
 import {faCheckCircle} from '@fortawesome/free-regular-svg-icons'
-import {BillsService} from "../../services/bills.service";
+import {Firestore, collectionData, collection} from "@angular/fire/firestore";
+import {Observable} from "rxjs";
 
 @Component({
     selector: 'app-accounts',
@@ -12,13 +13,14 @@ export class AccountsComponent implements OnInit {
     billsDisplayedColumns: string[] = ['autopay', 'name', 'description'];
     bills: Account[] = [];
     faCheckCircle = faCheckCircle;
+    accounts$!: Observable<Account[]>;
 
-    constructor(private billsService: BillsService) {
+    constructor(private firestore: Firestore) {
     }
 
     ngOnInit(): void {
-        this.billsService.getAccounts()
-            .subscribe(accounts => this.bills = accounts.filter(({type}) => type == Type.Expense));
+        this.accounts$ = collectionData(collection(this.firestore, 'accounts')) as Observable<Account[]>;
+        this.accounts$.subscribe(accounts => this.bills = accounts);
     }
 
 }

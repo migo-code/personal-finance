@@ -114,6 +114,16 @@
               "src/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "personal-finance:build:production",
+            "firebaseProject": "personal-finance-455ab",
+            "firebaseHostingSite": "personal-finance-455ab"
+          }
         }
       }
     }
